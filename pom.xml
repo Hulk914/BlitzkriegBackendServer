@@ -45,6 +45,11 @@
 
 	<dependencies>
 		<dependency>
+			<groupId>postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>9.1-901-1.jdbc4</version>
+		</dependency>
+		<dependency>
 			<groupId>org.glassfish.jersey.containers</groupId>
 			<artifactId>jersey-container-servlet-core</artifactId>
 			<!-- use the following artifactId if you don't need servlet 2.x compatibility -->

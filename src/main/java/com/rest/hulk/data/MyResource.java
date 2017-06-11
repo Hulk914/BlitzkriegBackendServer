@@ -5,7 +5,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
-
+import com.rest.hulk.data.UserDao;
 /**
  * Root resource (exposed at "myresource" path)
  */
@@ -29,8 +29,8 @@ public class MyResource {
     @Produces(MediaType.APPLICATION_JSON)
     public Response getDetails(){
     	UserDetails user=new UserDetails();
-    	user.setUsername("Ayush");
-    	user.setPassword("Password");
+    	UserDao userDao=new UserDao();
+    	user=userDao.getUserInfo();
     	return Response.ok()
     			.entity(user)
     			.header("Access-Control-Allow-Origin", "*")
