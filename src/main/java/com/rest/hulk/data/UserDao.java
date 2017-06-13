@@ -24,7 +24,7 @@ public class UserDao {
 		        	 String password=rs.getString("password");
 		        	 userInfo.setUsername(username);
 		        	 userInfo.setPassword(password);
-		        	 System.out.println("id: "+id+"username: "+username+"password"+password);
+		        	 System.out.println("id: "+id+" username: "+username+" password"+password);
 		         }
 		      } catch (Exception e) {
 		         e.printStackTrace();
