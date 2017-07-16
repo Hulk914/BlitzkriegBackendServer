@@ -14,9 +14,9 @@ public class LoginDaoImpl implements LoginDao {
 		SignIn userInfo = new SignIn();
 		try {
 			Class.forName("org.postgresql.Driver");
-			c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/user", "postgres", "@Yush614");
+			c = DriverManager.getConnection("jdbc:postgresql://localhost:5432/askinfo", "postgres", "@Yush614");
 			stmt = c.createStatement();
-			ResultSet rs = stmt.executeQuery("SELECT * FROM USERDETAILS;");
+			ResultSet rs = stmt.executeQuery("SELECT * FROM SIGNINDETAILS;");
 			while (rs.next()) {
 				int id = rs.getInt("id");
 				String username = rs.getString("username");
