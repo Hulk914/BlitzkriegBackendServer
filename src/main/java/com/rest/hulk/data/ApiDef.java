@@ -58,13 +58,4 @@ public class ApiDef {
 				.build();
 	}
 	
-	@OPTIONS
-	@Path("/signup")
-	@Produces(MediaType.APPLICATION_JSON)
-	public Response handleCors() {
-		return Response.ok().header("Access-Control-Allow-Origin", "*")
-				.header("Access-Control-Allow-Methods", "GET, POST, PATCH, PUT, DELETE, OPTIONS")
-				.header("Access-Control-Allow-Headers", "origin, content-type, accept, authorization").allow("OPTIONS")
-				.build();
-	}
 }
